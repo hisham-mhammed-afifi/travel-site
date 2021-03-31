@@ -27,15 +27,37 @@
 
     &__b-margin {
     margin-bottom: 0;
-  }
+    }
   }
 
+
+
+
+  @mixin atLarge {
+    &__large-4 {
+      float: left;
+      width: 33.33%;
+    }
+  }
+
+
+
+
+  &--t-padding {
+    padding-top: 80px;
+  }
+
+
   &--gutters {
-    margin-right: -65px;
+    margin-right: -66px;
   }
   &--gutters-large {
     margin-right: -100px;
   }
+  &--gutters-small {
+    margin-right: -50px;
+  }
+
 
   &--gutters > div {
     padding-right: 65px;
@@ -43,8 +65,25 @@
   &--gutters-large > div {
     padding-right: 100px;
   }
+  &--gutters-small > div {
+    padding-right: 50px;
+  }
+
 
   &__b-margin {
     margin-bottom: 1rem;
+  }
+
+  /* ---Equal height Rules--- */
+
+  &--equal {
+    @mixin atLarge {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
   }
 }

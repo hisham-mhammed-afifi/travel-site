@@ -45,6 +45,12 @@
       padding: 12px 0;
       font-size: 1rem;
       background-color: transparent;
+
+      &.current-link {
+        color: $mainOrange;
+        font-size: 1rem;
+        font-weight: 400;
+      }
     }
   }
 
